@@ -1,7 +1,8 @@
 ---
 title: 认识vue.js
 date: 2017-04-25 21:27:00
-tags:
+tags: 
+categories: 学习vuejs
 ---
 
 ***vue.js框架的理解***
@@ -20,6 +21,8 @@ MVVM 数据绑定
     <!-- 双向绑定 -->
     <input v-model="msg">  
 ```
+
+![Vue.js的MVVM架构](../uploads/vue.jpg)
 ***vue.js简单语法***
 
 *html 代码块*
