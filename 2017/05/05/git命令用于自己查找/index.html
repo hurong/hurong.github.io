@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="每天都要进步，一起加油！">
+<meta name="description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。 找一个干净目录，假设是git_work1234567892. cd git_work3. git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录4. cd project">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初步认识vue.js">
-<meta property="og:url" content="http://hurong.github.io/2017/04/26/初步认识vue-js/index.html">
+<meta property="og:title" content="git命令用于自己查找">
+<meta property="og:url" content="http://hurong.github.io/2017/05/05/git命令用于自己查找/index.html">
 <meta property="og:site_name" content="胡小黑的学习之旅 做一个有思想的人">
-<meta property="og:description" content="每天都要进步，一起加油！">
-<meta property="og:updated_time" content="2017-04-27T08:29:28.343Z">
+<meta property="og:description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。 找一个干净目录，假设是git_work1234567892. cd git_work3. git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录4. cd project">
+<meta property="og:updated_time" content="2017-05-05T02:09:47.113Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初步认识vue.js">
-<meta name="twitter:description" content="每天都要进步，一起加油！">
+<meta name="twitter:title" content="git命令用于自己查找">
+<meta name="twitter:description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。 找一个干净目录，假设是git_work1234567892. cd git_work3. git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录4. cd project">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://hurong.github.io/2017/04/26/初步认识vue-js/"/>
+  <link rel="canonical" href="http://hurong.github.io/2017/05/05/git命令用于自己查找/"/>
 
 
 
 
 
-  <title>初步认识vue.js | 胡小黑的学习之旅 做一个有思想的人</title>
+  <title>git命令用于自己查找 | 胡小黑的学习之旅 做一个有思想的人</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +272,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://hurong.github.io/hurong.github.io/2017/04/26/初步认识vue-js/">
+    <link itemprop="mainEntityOfPage" href="http://hurong.github.io/hurong.github.io/2017/05/05/git命令用于自己查找/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rong Hu">
@@ -293,7 +293,7 @@
             
             
               
-                初步认识vue.js
+                git命令用于自己查找
               
             
           </h1>
@@ -308,8 +308,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-26T13:08:18+08:00">
-                2017-04-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-05T09:47:11+08:00">
+                2017-05-05
               </time>
             
 
@@ -318,28 +318,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/hurong.github.io/categories/学习vuejs/" itemprop="url" rel="index">
-                    <span itemprop="name">学习vuejs</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -365,7 +343,14 @@
       
 
       
-        
+        <h1 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h1><p><strong>直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。</strong></p>
+<figure class="highlight plain"><figcaption><span>找一个干净目录，假设是git_work</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">2. cd git_work</div><div class="line">3. git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录</div><div class="line">4. cd project</div><div class="line">5. git branch -a，列出所有分支名称如下：</div><div class="line">remotes/origin/dev</div><div class="line">remotes/origin/release</div><div class="line">6. git checkout -b dev origin/dev，作用是checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支</div><div class="line">7. git checkout -b release origin/release，作用参见上一步解释</div><div class="line">8. git checkout dev，切换回dev分支，并开始开发。</div></pre></td></tr></table></figure>
+<p><strong>git clone 仓库中的一个分支</strong></p>
+<figure class="highlight plain"><figcaption><span>clone -b <branch> <remote_repo> </remote_repo></branch></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line"></div><div class="line">**git 推送本地分支到远程新分支上**</div><div class="line"></div><div class="line">```git push origin local_branch:remote_branch</div><div class="line">这个操作，local_branch必须为你本地存在的分支，remote_branch为远程分支，如果remote_branch不存在则会自动创建分支。</div><div class="line">类似，git push origin :remote_branch，local_branch留空的话则是删除远程remote_branch分支。</div></pre></td></tr></table></figure>
+<p><strong>git本地分支与远程分支关联的方法*</strong></p>
+<figure class="highlight plain"><figcaption><span>和dev分支</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">在本地</div><div class="line">git checkout -b dev 新建并切换到本地dev分支</div><div class="line">git pull origin dev 本地分支与远程分支相关联</div><div class="line"></div><div class="line">在本地新建分支并推送到远程</div><div class="line">git checkout -b test</div><div class="line">git push origin test   这样远程仓库中也就创建了一个test分支</div></pre></td></tr></table></figure>
+<p>当我们在本地新建一个叫devtest的分支的时候，我们希望他与git远程上的某个分支进行关联。<br><figure class="highlight plain"><figcaption><span>branch --set-upstream-to origin/devtest devtest </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line"></div><div class="line"></div><div class="line">**git一般的步骤**</div><div class="line">```1. 克隆代码</div><div class="line">git clone https://github.com/XXX.git  </div><div class="line"></div><div class="line">2. 查看所有分支</div><div class="line">git branch --all  </div><div class="line"># 默认只有master分支，所以会看到如下两个分支</div><div class="line"># master[本地主分支] origin/master[远程主分支]</div><div class="line"># 新克隆下来的代码默认master和origin/master是关联的，也就是他们的代码保持同步</div><div class="line"></div><div class="line">3. 创建本地新的dev分支</div><div class="line">git branch dev  # 创建本地分支</div><div class="line">git branch  # 查看分支</div><div class="line"># 这是会看到</div><div class="line">master和dev，而且master上会有一个星号</div><div class="line"># 这个时候dev是一个本地分支，远程仓库不知道它的存在</div><div class="line"># 本地分支可以不同步到远程仓库，我们可以在dev开发，然后merge到master，使用master同步代码，当然也可以同步</div><div class="line"></div><div class="line">4. 发布dev分支</div><div class="line">发布dev分支指的是同步dev分支的代码到远程服务器</div><div class="line">git push origin dev:dev  # 这样远程仓库也有一个dev分支了</div><div class="line"></div><div class="line">5. 在dev分支开发代码</div><div class="line">git checkout dev  # 切换到dev分支进行开发</div><div class="line"># 开发代码之后，我们有两个选择</div><div class="line"># 第一个：如果功能开发完成了，可以合并主分支</div><div class="line">git checkout master  # 切换到主分支</div><div class="line">git merge dev  # 把dev分支的更改和master合并</div><div class="line">git push  # 提交主分支代码远程</div><div class="line">git checkout dev  # 切换到dev远程分支</div><div class="line">git push  # 提交dev分支到远程</div><div class="line"># 第二个：如果功能没有完成，可以直接推送</div><div class="line">git push  # 提交到dev远程分支</div><div class="line"># 注意：在分支切换之前最好先commit全部的改变，除非你真的知道自己在做什么</div><div class="line"></div><div class="line">6. 删除分支</div><div class="line">git push origin :dev  # 删除远程dev分支，危险命令哦</div><div class="line"># 下面两条是删除本地分支</div><div class="line">git checkout master  # 切换到master分支</div><div class="line">git branch -d dev  # 删除本地dev分支</div></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -401,8 +386,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hurong.github.io/2017/04/25/认识vue-js/" rel="next" title="认识vue.js">
-                <i class="fa fa-chevron-left"></i> 认识vue.js
+              <a href="/hurong.github.io/2017/05/04/flex布局-跟着阮一峰大神学习/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -410,10 +395,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/hurong.github.io/2017/05/04/flex布局-跟着阮一峰大神学习/" rel="prev" title="flex布局-跟着阮一峰大神学习">
-                flex布局-跟着阮一峰大神学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -460,8 +441,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/hurong.github.io/uploads/111.jpg"
@@ -514,6 +504,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git命令"><span class="nav-number">1.</span> <span class="nav-text">git命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
