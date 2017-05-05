@@ -90,16 +90,18 @@
 
 
 
-<meta name="description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。 &amp;gt;  找一个干净目录，假设是git_work cd git_work git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录 cd project git bran">
+<meta name="description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。   找一个干净目录，假设是git_work cd git_work git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录 cd project git branch -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git命令用于自己查找">
 <meta property="og:url" content="http://hurong.github.io/2017/05/05/git命令用于自己查找/index.html">
 <meta property="og:site_name" content="胡小黑的学习之旅 做一个有思想的人">
-<meta property="og:description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。 &amp;gt;  找一个干净目录，假设是git_work cd git_work git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录 cd project git bran">
-<meta property="og:updated_time" content="2017-05-05T02:19:27.592Z">
+<meta property="og:description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。   找一个干净目录，假设是git_work cd git_work git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录 cd project git branch -">
+<meta property="og:image" content="http://hurong.github.io/2017/05/05/uploads/git.png">
+<meta property="og:updated_time" content="2017-05-05T09:10:00.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git命令用于自己查找">
-<meta name="twitter:description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。 &amp;gt;  找一个干净目录，假设是git_work cd git_work git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录 cd project git bran">
+<meta name="twitter:description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。   找一个干净目录，假设是git_work cd git_work git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录 cd project git branch -">
+<meta name="twitter:image" content="http://hurong.github.io/2017/05/05/uploads/git.png">
 
 
 
@@ -344,7 +346,7 @@
 
       
         <h1 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h1><p><strong>直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。</strong></p>
-<p>&gt;</p>
+<blockquote>
 <ol>
 <li>找一个干净目录，假设是git_work</li>
 <li>cd git_work</li>
@@ -353,10 +355,9 @@
 <li>git branch -a，列出所有分支名称如下：<br>remotes/origin/dev<br>remotes/origin/release</li>
 <li>git checkout -b dev origin/dev，作用是checkout远程的dev分支，在本地起名为dev分支，并切换到本地的dev分支</li>
 <li>git checkout -b release origin/release，作用参见上一步解释</li>
-<li>git checkout dev，切换回dev分支，并开始开发。<blockquote>
-</blockquote>
-</li>
+<li>git checkout dev，切换回dev分支，并开始开发。</li>
 </ol>
+</blockquote>
 <p><strong>git clone 仓库中的一个分支</strong></p>
 <blockquote>
 <p>git clone -b <branch> <remote_repo> </remote_repo></branch></p>
@@ -384,6 +385,8 @@
 <li>删除分支<br>git push origin :dev  # 删除远程dev分支，危险命令哦# 下面两条是删除本地分支<br>git checkout master  # 切换到master分支<br>git branch -d dev  # 删除本地dev分支</li>
 </ol>
 </blockquote>
+<p><strong>拜读阮一峰的博客</strong></p>
+<p><img src="../uploads/git.png" alt="Git过程图"></p>
 
       
     </div>
