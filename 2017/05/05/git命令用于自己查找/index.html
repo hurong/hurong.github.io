@@ -97,7 +97,7 @@
 <meta property="og:site_name" content="胡小黑的学习之旅 做一个有思想的人">
 <meta property="og:description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。   找一个干净目录，假设是git_work cd git_work git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录 cd project git branch -">
 <meta property="og:image" content="http://hurong.github.io/2017/05/05/uploads/git.png">
-<meta property="og:updated_time" content="2017-05-05T09:10:00.598Z">
+<meta property="og:updated_time" content="2017-05-05T09:41:42.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git命令用于自己查找">
 <meta name="twitter:description" content="git命令直接用git clone ssh协议地址 克隆远程库的master分支，但是这样无法clone所有分支，可以用一下方法解决。   找一个干净目录，假设是git_work cd git_work git clone http://myrepo.xxx.com/project/.git ,这样在git_work目录下得到一个project子目录 cd project git branch -">
@@ -387,6 +387,22 @@
 </blockquote>
 <p><strong>拜读阮一峰的博客</strong></p>
 <p><img src="../uploads/git.png" alt="Git过程图"></p>
+<p><strong>增加/删除文件</strong></p>
+<blockquote>
+<p>添加指定文件到暂存区<br>$ git add [file1] [file2] …<br>添加指定目录到暂存区，包括子目录<br>$ git add [dir]<br>添加当前目录的所有文件到暂存区<br>$ git add .<br>添加每个变化前，都会要求确认<br>对于同一个文件的多处变化，可以实现分次提交<br>$ git add -p<br>删除工作区文件，并且将这次删除放入暂存区<br>$ git rm [file1] [file2] …<br>停止追踪指定文件，但该文件会保留在工作区<br>$ git rm –cached [file]<br>改名文件，并且将这个改名放入暂存区<br>$ git mv [file-original] [file-renamed]</p>
+</blockquote>
+<p><strong>代码提交</strong></p>
+<blockquote>
+<p>提交暂存区到仓库区<br>$ git commit -m [message]<br>提交暂存区的指定文件到仓库区<br>$ git commit [file1] [file2] … -m [message]<br>提交工作区自上次commit之后的变化，直接到仓库区<br>$ git commit -a<br>提交时显示所有diff信息<br>$ git commit -v<br>使用一次新的commit，替代上一次提交<br>如果代码没有任何新变化，则用来改写上一次commit的提交信息<br>$ git commit –amend -m [message]<br>重做上一次commit，并包括指定文件的新变化<br>$ git commit –amend [file1] [file2] …</p>
+</blockquote>
+<p><strong>分支</strong></p>
+<blockquote>
+<p>列出所有本地分支<br>$ git branch<br>列出所有远程分支<br>$ git branch -r<br>列出所有本地分支和远程分支<br>$ git branch -a<br>新建一个分支，但依然停留在当前分支<br>$ git branch [branch-name]<br>新建一个分支，并切换到该分支<br>$ git checkout -b [branch]<br>新建一个分支，指向指定commit<br>$ git branch [branch] [commit]<br>新建一个分支，与指定的远程分支建立追踪关系<br>$ git branch –track [branch] [remote-branch]<br>切换到指定分支，并更新工作区<br>$ git checkout [branch-name]<br>切换到上一个分支<br>$ git checkout -<br>建立追踪关系，在现有分支与指定的远程分支之间<br>$ git branch –set-upstream [branch] [remote-branch]<br>合并指定分支到当前分支<br>$ git merge [branch]<br>选择一个commit，合并进当前分支<br>$ git cherry-pick [commit]<br>删除分支<br>$ git branch -d [branch-name]<br>删除远程分支<br>$ git push origin –delete [branch-name]<br>$ git branch -dr [remote/branch]</p>
+</blockquote>
+<p><strong>撤销</strong></p>
+<blockquote>
+<p>恢复暂存区的指定文件到工作区<br>$ git checkout [file]<br>恢复某个commit的指定文件到暂存区和工作区<br>$ git checkout [commit] [file]<br>恢复暂存区的所有文件到工作区<br>$ git checkout .<br>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变<br>$ git reset [file]<br>重置暂存区与工作区，与上一次commit保持一致<br>$ git reset –hard<br>重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变<br>$ git reset [commit]<br>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致<br>$ git reset –hard [commit]<br>重置当前HEAD为指定commit，但保持暂存区和工作区不变<br>$ git reset –keep [commit]<br>新建一个commit，用来撤销指定commit<br>后者的所有变化都将被前者抵消，并且应用到当前分支<br>$ git revert [commit]<br>暂时将未提交的变化移除，稍后再移入<br>$ git stash<br>$ git stash pop</p>
+</blockquote>
 
       
     </div>
