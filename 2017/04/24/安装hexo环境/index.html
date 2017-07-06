@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://hurong.github.io/2017/04/24/安装hexo环境/index.html">
 <meta property="og:site_name" content="胡小黑的学习之旅 做一个有思想的人">
 <meta property="og:description" content="小黑感慨  以为很简单的环境搭建，在真正开始的时候就知道有多么折腾了，以前的电脑还搭建过，现在进入一个新公司，拿到一个新电脑，很多东西又要重新配置的时候，才知道自己的问题好多，这个时候我才有想法真正坚持写自己的博客，记录工作中和生活中遇到的问题，仅供自己参考，如果问题，欢迎指出，大家共同成长。  安装软件 node.js Git 注册github账号   安装基本步骤就不说了，把自己遇到的问题记录">
-<meta property="og:updated_time" content="2017-04-27T08:29:28.343Z">
+<meta property="og:updated_time" content="2017-07-06T06:47:59.006Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Pages+Hexo搭建博客(基于windows下)">
 <meta name="twitter:description" content="小黑感慨  以为很简单的环境搭建，在真正开始的时候就知道有多么折腾了，以前的电脑还搭建过，现在进入一个新公司，拿到一个新电脑，很多东西又要重新配置的时候，才知道自己的问题好多，这个时候我才有想法真正坚持写自己的博客，记录工作中和生活中遇到的问题，仅供自己参考，如果问题，欢迎指出，大家共同成长。  安装软件 node.js Git 注册github账号   安装基本步骤就不说了，把自己遇到的问题记录">
@@ -379,6 +379,10 @@
 <pre><code>执行： npm install cnpm -g --registry = https://registry.npm.taobao.org
 </code></pre><p>这样cnpm也可以和npm一样安装插件了</p>
 </blockquote>
+<p><em>关于日常的改动流程在本地对博客进行修改</em></p>
+<blockquote>
+<p>（添加新博文、修改样式等等）后，通过下面的流程进行管理。1. 依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；2. 然后才执行hexo g -d发布网站到master分支上。虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催….的情况，调转顺序就有问题了）。</p>
+</blockquote>
 
       
     </div>
@@ -495,7 +499,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/hurong.github.io/archives">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
