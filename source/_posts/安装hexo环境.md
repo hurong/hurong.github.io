@@ -23,5 +23,11 @@ categories: hexo+githubPage搭建博客
     执行： npm install cnpm -g --registry = https://registry.npm.taobao.org
 ``` 
 > 这样cnpm也可以和npm一样安装插件了
+> 
+
+*关于日常的改动流程在本地对博客进行修改*
+>（添加新博文、修改样式等等）后，通过下面的流程进行管理。1. 依次执行git add .、git commit -m "..."、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；2. 然后才执行hexo g -d发布网站到master分支上。虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催....的情况，调转顺序就有问题了）。
+
+
 
  
